@@ -20,11 +20,19 @@ object Main:
 
   def appElement(): Element =
     div(
-       h1("Chart", img(src:= "/vite.svg")),
-      // renderDataTable(),
-      // renderDataChart(),
-      // renderDataList(),
-    )
+        div(
+          h1("Master Control")),
+          button("IP", onClick --> { _ => client.getexample() }),
+          button("On", onClick --> { _ => dom.window.alert("On") }),
+          button("Off", onClick --> { _ => dom.window.alert("Off") }),
+        div(
+          div(
+            h1("Next Control"),
+            button("On", onClick --> { _ => dom.window.alert("On") }),
+            button("Off", onClick --> { _ => dom.window.alert("Off") }),
+          )
+        )
+      )
   end appElement
 
   // def renderDataList(): Element =
