@@ -22,7 +22,7 @@ object Main:
     div(
         div(
           h1("Master Control")),
-          button("IP", onClick --> { _ => client.getexample() }),
+          button("IP", onClick --> { _ => httpclient.getexample() }),
           button("On", onClick --> { _ => dom.window.alert("On") }),
           button("Off", onClick --> { _ => dom.window.alert("Off") }),
         div(
