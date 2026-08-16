@@ -38,9 +38,13 @@ lazy val $name$ = project.in(file("."))
      */
     libraryDependencies ++= Dependencies.scalajsdom.value,
     libraryDependencies ++= Dependencies.laminar.value,
-    libraryDependencies ++= Dependencies.upickle.value,
     libraryDependencies ++= Dependencies.scalatest.value,
     libraryDependencies +="org.scala-js" %%% "scala-js-macrotask-executor" % "1.1.1",
+    libraryDependencies += "com.softwaremill.sttp.client4" %%% "core" % "4.0.26",
+    libraryDependencies +="dev.zio" %%% "zio" % "2.1.26",
+    libraryDependencies += "dev.zio" %%% "zio-json" % "0.10.0",
+
+
 
     // Tell ScalablyTyped that we manage `npm install` ourselves
     externalNpm := baseDirectory.value,

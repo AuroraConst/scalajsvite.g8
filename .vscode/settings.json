@@ -1,6 +1,6 @@
 {
     "files.watcherExclude": {
-        "**/target": true
+        "**/target/**": true
     },
-    "workbench.colorTheme": "Default Dark+"
+    "workbench.colorTheme": "Dark+"
 }
